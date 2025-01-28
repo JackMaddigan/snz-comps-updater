@@ -12,6 +12,9 @@ jobs:
   update_competitions:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # Ensure write access to the repository contents
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -28,7 +31,7 @@ jobs:
         run: |
           echo "Running script..."
           node index.js
-        continue-on-error: true # Allow the workflow to continue even if this step fails
+        continue-on-error: true
 
       - name: Show logs for script execution
         run: |
