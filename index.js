@@ -3,6 +3,8 @@ const fs = require("fs");
 
 async function updateComps() {
   try {
+    console.log("UPDATE COMPS");
+    console.log("CURRENT COMPS", currentComps);
     const newComps = [];
 
     const options = {
@@ -22,6 +24,7 @@ async function updateComps() {
 
     const comps = (await response.json())?.items;
 
+    console.log(comps.map((comp) => comp.id));
     for (const comp of comps) {
       if (currentCompIds.has(comp.id)) continue;
       console.log(comp.id);
@@ -43,6 +46,7 @@ async function updateComps() {
       });
     }
 
+    console.log("NEW COMPS", newComps);
     if (newComps.length) {
       const allComps = currentComps
         .filter((comp) => new Date(comp.date.from) > thirtyDaysBeforeNow)
