@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: "16" # You can change the Node version if needed
 
-      - name: Install dependencies
-        run: npm install # Installs dependencies (assuming you have a package.json)
+      # - name: Install dependencies
+      #   run: npm install # Installs dependencies (assuming you have a package.json)
 
       - name: Run the competition check script
         run: node index.js # Adjust with the path to your script
