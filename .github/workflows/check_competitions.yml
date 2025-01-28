@@ -25,3 +25,13 @@ jobs:
       - name: Run the update script
         run: |
           node index.js  # Run your script to update competitions
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git add ./competitions.json
+          git commit -m "Update competitions.json"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
