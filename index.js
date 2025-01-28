@@ -28,7 +28,6 @@ async function updateComps() {
 
     const comps = (await response.json())?.items;
 
-    console.log(comps.map((comp) => comp.id).join(", "));
     for (const comp of comps) {
       if (currentCompIds.has(comp.id)) continue;
       const till = new Date(
@@ -49,12 +48,14 @@ async function updateComps() {
       });
     }
 
-    console.log("NEW COMPS", newComps);
     if (newComps.length) {
+      // remove older comps from the file
       const allComps = currentComps
-        .filter((comp) => new Date(comp.date.from) > thirtyDaysBeforeNow)
-        .concat(newComps);
+        .filter((comp) => new Date(comp.date.till) > thirtyDaysBeforeNow)
+        .concat(newComps)
+        .sort((a, b) => a.date.from - b.date.from);
 
+      // write to file
       console.log("WRITING...");
       fs.writeFileSync(
         "./competitions.json",
