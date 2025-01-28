@@ -9,6 +9,9 @@ jobs:
   update-competitions:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # Ensure write access to contents (for pushing changes)
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -19,19 +22,15 @@ jobs:
           node-version: "16" # You can choose the Node.js version you want
 
       - name: Install dependencies
-        run: |
-          npm install  # This will install node-fetch and other dependencies listed in package.json
+        run: npm install # This will install node-fetch and other dependencies listed in package.json
 
       - name: Run the update script
-        run: |
-          node index.js  # Run your script to update competitions
+        run: node index.js # Run your script to update competitions
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
           git config --local user.name "github-actions"
-          git config --local user.email "github-actions@github.com"
-          git add ./competitions.json
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add competitions.json
           git commit -m "Update competitions.json"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
