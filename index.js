@@ -8,8 +8,7 @@ const currentComps = JSON.parse(
 
 async function updateComps() {
   try {
-    console.log("UPDATE COMPS");
-    console.log("CURRENT COMPS", currentComps);
+    console.log("WORKING...");
     const newComps = [];
 
     const options = {
@@ -29,10 +28,9 @@ async function updateComps() {
 
     const comps = (await response.json())?.items;
 
-    console.log(comps.map((comp) => comp.id));
+    console.log(comps.map((comp) => comp.id).join(", "));
     for (const comp of comps) {
       if (currentCompIds.has(comp.id)) continue;
-      console.log(comp.id);
       const till = new Date(
         new Date(comp.date.till).toLocaleString("en-US", options)
       );
@@ -56,10 +54,13 @@ async function updateComps() {
       const allComps = currentComps
         .filter((comp) => new Date(comp.date.from) > thirtyDaysBeforeNow)
         .concat(newComps);
+
+      console.log("WRITING...");
       fs.writeFileSync(
         "./competitions.json",
         JSON.stringify(allComps, null, 2)
       );
+      console.log("DONE");
     }
   } catch (error) {
     console.error(error);
