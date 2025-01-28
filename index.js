@@ -1,5 +1,6 @@
 const currentComps = require("./competitions.json");
 const fs = require("fs");
+const fetch = require("node-fetch");
 
 async function updateComps() {
   try {
