@@ -2,15 +2,12 @@ name: Update Competitions
 
 on:
   schedule:
-    - cron: "0 0 * * *" # This runs the job daily at midnight UTC
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
   workflow_dispatch: # Allows manual trigger of the workflow
 
 jobs:
   update-competitions:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write # Ensure write access to contents (for pushing changes)
 
     steps:
       - name: Checkout repository
@@ -19,18 +16,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # You can choose the Node.js version you want
+          node-version: "16" # Use a specific Node.js version
 
       - name: Install dependencies
-        run: npm install # This will install node-fetch and other dependencies listed in package.json
+        run: npm install
 
       - name: Run the update script
-        run: node index.js # Run your script to update competitions
+        run: node index.js
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes detected.";
+            echo "has_changes=false" >> $GITHUB_ENV;
+          else
+            echo "Changes detected.";
+            echo "has_changes=true" >> $GITHUB_ENV;
+          fi
 
       - name: Commit changes
+        if: ${{ env.has_changes == 'true' }}
         run: |
           git config --local user.name "github-actions"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions@github.com"
           git add competitions.json
           git commit -m "Update competitions.json"
           git push
