@@ -1,6 +1,10 @@
-const currentComps = require("./competitions.json");
-const fs = require("fs");
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
+
+const currentComps = JSON.parse(
+  fs.readFileSync(path.resolve("competitions.json"), "utf8")
+);
 
 async function updateComps() {
   try {
