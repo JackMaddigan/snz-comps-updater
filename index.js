@@ -45,9 +45,7 @@ async function updateComps() {
 
     if (newComps.length) {
       const allComps = currentComps
-        .filter((comp) => {
-          new Date(comp.date.from) > thirtyDaysBeforeNow;
-        })
+        .filter((comp) => new Date(comp.date.from) > thirtyDaysBeforeNow)
         .concat(newComps);
       fs.writeFileSync(
         "./competitions.json",
