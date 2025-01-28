@@ -1,0 +1,41 @@
+name: Check WCA Competitions
+
+on:
+  schedule:
+    # This schedules the action to run every day at midnight UTC. You can adjust this as needed.
+    - cron: "0 0 * * *" # Runs every day at midnight UTC
+  workflow_dispatch:
+    # Allows manual triggering of the workflow from GitHub Actions UI
+  push:
+    # This allows the action to run when there is a push to the repo
+    branches:
+      - main # Change this to the branch you want to track
+
+jobs:
+  update_competitions:
+    runs-on: ubuntu-latest # The environment to run the script in (Ubuntu)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3 # Checks out the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3 # Sets up Node.js (needed for your script)
+        with:
+          node-version: "16" # You can change the Node version if needed
+
+      - name: Install dependencies
+        run: npm install # Installs dependencies (assuming you have a package.json)
+
+      - name: Run the competition check script
+        run: node index.js # Adjust with the path to your script
+
+      - name: Commit updated file
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git add competitions.json
+          git commit -m "Update competition data"
+          git push origin main  # Change 'main' to the appropriate branch name
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
