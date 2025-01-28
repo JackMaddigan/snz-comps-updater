@@ -1,53 +1,27 @@
-name: Check WCA Competitions
+name: Update Competitions
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+    - cron: "0 0 * * *" # This runs the job daily at midnight UTC
+  workflow_dispatch: # Allows manual trigger of the workflow
 
 jobs:
-  update_competitions:
+  update-competitions:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write # Ensure write access to the repository contents
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: "16" # You can choose the Node.js version you want
 
-      - name: Check file structure
-        run: ls -alh # Print directory contents
-
-      - name: Run the competition check script
+      - name: Install dependencies
         run: |
-          echo "Running script..."
-          node index.js
-        continue-on-error: true
+          npm install  # This will install node-fetch and other dependencies listed in package.json
 
-      - name: Show logs for script execution
+      - name: Run the update script
         run: |
-          echo "Showing logs from previous step"
-          cat /home/runner/.npm/_logs/*.log
-
-      - name: Commit updated competitions.json
-        run: |
-          echo "Configuring git user"
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@users.noreply.github.com"
-          echo "Adding competitions.json"
-          git add competitions.json
-          echo "Committing changes"
-          git commit -m "Update competition data" || echo "No changes to commit"
-          echo "Pushing to main"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node index.js  # Run your script to update competitions
