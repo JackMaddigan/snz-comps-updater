@@ -53,7 +53,7 @@ async function updateComps() {
       const allComps = currentComps
         .filter((comp) => new Date(comp.date.till) > thirtyDaysBeforeNow)
         .concat(newComps)
-        .sort((a, b) => a.date.from.localeCompare(b.date.from));
+        .sort((a, b) => b.date.from.localeCompare(a.date.from));
 
       // write to file
       console.log("WRITING...");
