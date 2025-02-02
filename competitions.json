@@ -289,5 +289,83 @@
     "registration_open": "2024-11-25T05:00:00.000Z",
     "registration_close": "2025-01-07T10:59:00.000Z",
     "registration_full": false
+  },
+  {
+    "id": "NZSouthIslandChampionship2025",
+    "name": "NZ South Island Championship 2025",
+    "city": "Dunedin",
+    "date": {
+      "from": "2025-04-12",
+      "till": "2025-04-14",
+      "numberOfDays": 3
+    },
+    "isCanceled": false,
+    "events": [
+      "222",
+      "333",
+      "333bf",
+      "333mbf",
+      "333oh",
+      "444",
+      "444bf",
+      "555",
+      "555bf",
+      "666",
+      "777",
+      "clock",
+      "minx",
+      "pyram",
+      "skewb",
+      "sq1"
+    ],
+    "venue": {
+      "name": "Edgar Centre - Harbour View Lounge",
+      "address": "116 Portsmouth Drive, Andersons Bay, Dunedin 9012",
+      "details": "First floor, signs will point towards the \"Harbour View Lounge\"",
+      "coordinates": {
+        "latitude": -45.892584,
+        "longitude": 170.511783
+      }
+    },
+    "registration_open": "2025-02-03T05:00:00.000Z",
+    "registration_close": "2025-04-08T11:59:00.000Z",
+    "registration_full": false
+  },
+  {
+    "id": "CrazyCubinginChristchurch2025",
+    "name": "Crazy Cubing in Christchurch 2025",
+    "city": "Christchurch",
+    "date": {
+      "from": "2025-04-05",
+      "till": "2025-04-06",
+      "numberOfDays": 2
+    },
+    "isCanceled": false,
+    "events": [
+      "222",
+      "333",
+      "333bf",
+      "333oh",
+      "444bf",
+      "555",
+      "555bf",
+      "777",
+      "minx",
+      "pyram",
+      "skewb",
+      "sq1"
+    ],
+    "venue": {
+      "name": "WEA Christchurch",
+      "address": "59 Gloucester Street, Christchurch Central City, Christchurch 8013",
+      "details": "Main Hall",
+      "coordinates": {
+        "latitude": -43.529677,
+        "longitude": 172.631613
+      }
+    },
+    "registration_open": "2025-02-03T05:00:00.000Z",
+    "registration_close": "2025-04-01T10:59:00.000Z",
+    "registration_full": false
   }
 ]
