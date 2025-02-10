@@ -1,74 +1,57 @@
-import fetch from "node-fetch";
 import fs from "fs";
-import path from "path";
 
-const currentComps = JSON.parse(
-  fs.readFileSync(path.resolve("competitions.json"), "utf8")
-);
+runUpdate();
 
-async function updateComps() {
-  try {
-    console.log("WORKING...");
-    const newComps = [];
+async function runUpdate() {
+  console.log("Starting update!");
 
-    const options = {
-      timeZone: "Pacific/Auckland",
-    };
-    const now = new Date(new Date().toLocaleString("en-US", options));
-    now.setHours(0, 0, 0, 0);
+  const comps = JSON.parse(fs.readFileSync("./competitions.json"));
+  const knownCompIds = new Set(comps.map((comp) => comp.id));
 
-    const thirtyDaysBeforeNow = new Date(now);
-    thirtyDaysBeforeNow.setDate(now.getDate() - 30);
+  console.log(
+    "Fetching comps from https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json"
+  );
 
-    const currentCompIds = new Set(currentComps.map((comp) => comp.id));
+  const response = await fetch(
+    "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json"
+  );
 
-    const response = await fetch(
-      "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json"
-    );
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
 
-    const comps = (await response.json())?.items;
+  const thirtyDaysBeforeNow = new Date(now);
+  thirtyDaysBeforeNow.setDate(now.getDate() - 30);
 
-    for (const comp of comps) {
-      if (currentCompIds.has(comp.id)) continue;
-      const till = new Date(
-        new Date(comp.date.till).toLocaleString("en-US", options)
-      );
-      till.setHours(0, 0, 0, 0);
-      if (till < thirtyDaysBeforeNow) break; // past the old ones now
-      const supplementaryData = await getWcaData(comp.id);
-      newComps.push({
-        id: comp.id,
-        name: comp.name,
-        city: comp.city,
-        date: comp.date,
-        isCanceled: comp.isCanceled,
-        events: comp.events,
-        venue: comp.venue,
-        ...supplementaryData,
-      });
-    }
+  const fetchedComps = (await response.json()).items;
 
-    if (newComps.length) {
-      // remove older comps from the file
-      const allComps = currentComps
-        .filter((comp) => new Date(comp.date.till) > thirtyDaysBeforeNow)
-        .concat(newComps)
-        .sort((a, b) => b.date.from.localeCompare(a.date.from));
-
-      // write to file
-      console.log("WRITING...");
-      fs.writeFileSync(
-        "./competitions.json",
-        JSON.stringify(allComps, null, 2)
-      );
-      console.log("DONE");
-    }
-  } catch (error) {
-    console.error(error);
+  for (const comp of fetchedComps) {
+    if (knownCompIds.has(comp.id)) continue;
+    const till = new Date(comp.date.till);
+    if (till < thirtyDaysBeforeNow) break;
+    console.log(`New comp: ${comp.name}`);
+    // prettier-ignore
+    const { id, name, city, date, isCanceled, events, venue: { name: venue, coordinates }} = comp;
+    // prettier-ignore
+    const newComp = { id, name, city, date, isCanceled, events, venue: { name: venue, coordinates, }, ...(await fetchWCACompData(comp.id)), };
+    comps.push(newComp);
   }
+
+  const sortedFilteredComps = comps
+    .filter(
+      (comp) =>
+        new Date(comp.date.from) > thirtyDaysBeforeNow && !comp.isCanceled
+    )
+    .sort((a, b) => (new Date(a.date.from) < new Date(b.date.from) ? 1 : -1));
+
+  console.log("Writing to competitions.json...");
+  fs.writeFileSync(
+    "./competitions.json",
+    JSON.stringify(sortedFilteredComps, null, 2)
+  );
+  console.log("Finished");
 }
 
-async function getWcaData(compId) {
+async function fetchWCACompData(compId) {
   try {
     const response = await fetch(
       `https://api.worldcubeassociation.org/competitions/${compId}`
@@ -78,11 +61,9 @@ async function getWcaData(compId) {
     return {
       registration_open: comp.registration_open,
       registration_close: comp.registration_close,
-      registration_full: comp["registration_full?"],
+      use_wca_registration: comp.use_wca_registration,
     };
   } catch (error) {
     console.error(error);
   }
 }
-
-updateComps().catch(console.error);

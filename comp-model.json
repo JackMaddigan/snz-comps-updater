@@ -1,41 +1,32 @@
 {
-  "id": "NZNorthIslandChampionship2025",
-  "name": "NZ North Island Championship 2025",
-  "city": "Palmerston North",
+  "id": "QueensparkOClock2025",
+  "name": "Queenspark O'Clock 2025",
+  "city": "Christchurch",
   "date": {
-    "from": "2025-07-11",
-    "till": "2025-07-13",
-    "numberOfDays": 3
+    "from": "2025-03-29",
+    "till": "2025-03-30",
+    "numberOfDays": 2
   },
   "isCanceled": false,
   "events": [
     "222",
     "333",
-    "333bf",
-    "333mbf",
     "333oh",
     "444",
-    "444bf",
-    "555",
-    "555bf",
     "666",
-    "777",
     "clock",
-    "minx",
     "pyram",
     "skewb",
     "sq1"
   ],
   "venue": {
-    "name": "Community Leisure Centre",
-    "address": "569 Ferguson Street, Terrace End, Palmerston North 4410",
-    "details": "Neville Butler Hall",
+    "name": "Queenspark School",
     "coordinates": {
-      "latitude": -40.352527,
-      "longitude": 175.62849
+      "latitude": -43.473541,
+      "longitude": 172.696141
     }
   },
-  "registration_open": "2024-12-03T05:00:00.000Z",
-  "registration_close": "2025-07-07T11:59:00.000Z",
-  "registration_full": false
+  "registration_open": "2025-02-06T05:00:00.000Z",
+  "registration_close": "2025-03-25T10:59:00.000Z",
+  "use_wca_registration": false
 }
