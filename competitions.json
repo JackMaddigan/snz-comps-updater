@@ -41,6 +41,37 @@
     "registration_full": false
   },
   {
+    "id": "AucklandAutumn2025",
+    "name": "Auckland Autumn 2025",
+    "city": "Auckland",
+    "date": {
+      "from": "2025-04-12",
+      "till": "2025-04-12",
+      "numberOfDays": 1
+    },
+    "isCanceled": false,
+    "events": [
+      "333",
+      "333bf",
+      "333mbf",
+      "444bf",
+      "clock",
+      "skewb"
+    ],
+    "venue": {
+      "name": " Whitford Community Hall",
+      "address": "1 Whitford-Maraetai Road, Whitford 2571",
+      "details": "Council Hall ",
+      "coordinates": {
+        "latitude": -36.945904,
+        "longitude": 174.964023
+      }
+    },
+    "registration_open": "2025-01-25T05:00:00.000Z",
+    "registration_close": "2025-04-08T11:59:00.000Z",
+    "registration_full": false
+  },
+  {
     "id": "NZSouthIslandChampionship2025",
     "name": "NZ South Island Championship 2025",
     "city": "Dunedin",
@@ -78,37 +109,6 @@
       }
     },
     "registration_open": "2025-02-03T05:00:00.000Z",
-    "registration_close": "2025-04-08T11:59:00.000Z",
-    "registration_full": false
-  },
-  {
-    "id": "AucklandAutumn2025",
-    "name": "Auckland Autumn 2025",
-    "city": "Auckland",
-    "date": {
-      "from": "2025-04-12",
-      "till": "2025-04-12",
-      "numberOfDays": 1
-    },
-    "isCanceled": false,
-    "events": [
-      "333",
-      "333bf",
-      "333mbf",
-      "444bf",
-      "clock",
-      "skewb"
-    ],
-    "venue": {
-      "name": " Whitford Community Hall",
-      "address": "1 Whitford-Maraetai Road, Whitford 2571",
-      "details": "Council Hall ",
-      "coordinates": {
-        "latitude": -36.945904,
-        "longitude": 174.964023
-      }
-    },
-    "registration_open": "2025-01-25T05:00:00.000Z",
     "registration_close": "2025-04-08T11:59:00.000Z",
     "registration_full": false
   },
@@ -212,38 +212,6 @@
     "registration_full": false
   },
   {
-    "id": "JohnsonvilleFTOpen2025",
-    "name": "Johnsonville FTOpen 2025",
-    "city": "Wellington",
-    "date": {
-      "from": "2025-03-08",
-      "till": "2025-03-08",
-      "numberOfDays": 1
-    },
-    "isCanceled": false,
-    "events": [
-      "222",
-      "333",
-      "333bf",
-      "666",
-      "minx",
-      "pyram",
-      "skewb"
-    ],
-    "venue": {
-      "name": "[Johnsonville Community Centre](https://www.johnsonvillecommunitycentre.org.nz/)",
-      "address": "3 Frankmoore Avenue, Johnsonville, Wellington 6037",
-      "details": "Main hall",
-      "coordinates": {
-        "latitude": -41.222527,
-        "longitude": 174.805124
-      }
-    },
-    "registration_open": "2024-12-29T05:00:00.000Z",
-    "registration_close": "2025-03-04T10:59:00.000Z",
-    "registration_full": false
-  },
-  {
     "id": "BigandBlindQueenstown2025",
     "name": "Big and Blind Queenstown 2025",
     "city": "Queenstown",
@@ -276,6 +244,38 @@
     "registration_open": "2025-02-05T05:00:00.000Z",
     "registration_close": "2025-03-04T10:59:00.000Z",
     "use_wca_registration": false
+  },
+  {
+    "id": "JohnsonvilleFTOpen2025",
+    "name": "Johnsonville FTOpen 2025",
+    "city": "Wellington",
+    "date": {
+      "from": "2025-03-08",
+      "till": "2025-03-08",
+      "numberOfDays": 1
+    },
+    "isCanceled": false,
+    "events": [
+      "222",
+      "333",
+      "333bf",
+      "666",
+      "minx",
+      "pyram",
+      "skewb"
+    ],
+    "venue": {
+      "name": "[Johnsonville Community Centre](https://www.johnsonvillecommunitycentre.org.nz/)",
+      "address": "3 Frankmoore Avenue, Johnsonville, Wellington 6037",
+      "details": "Main hall",
+      "coordinates": {
+        "latitude": -41.222527,
+        "longitude": 174.805124
+      }
+    },
+    "registration_open": "2024-12-29T05:00:00.000Z",
+    "registration_close": "2025-03-04T10:59:00.000Z",
+    "registration_full": false
   },
   {
     "id": "Sqauckland2025",
