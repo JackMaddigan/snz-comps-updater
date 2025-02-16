@@ -2,7 +2,7 @@ name: Update Competitions
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "30 17 * * *"
   workflow_dispatch: # Allows manual trigger of the workflow
 
 permissions:
