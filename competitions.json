@@ -71,37 +71,6 @@
     "use_wca_registration": false
   },
   {
-    "id": "AucklandAutumn2025",
-    "name": "Auckland Autumn 2025",
-    "city": "Auckland",
-    "date": {
-      "from": "2025-04-12",
-      "till": "2025-04-12",
-      "numberOfDays": 1
-    },
-    "isCanceled": false,
-    "events": [
-      "333",
-      "333bf",
-      "333mbf",
-      "444bf",
-      "clock",
-      "skewb"
-    ],
-    "venue": {
-      "name": " Whitford Community Hall",
-      "address": "1 Whitford-Maraetai Road, Whitford 2571",
-      "details": "Council Hall ",
-      "coordinates": {
-        "latitude": -36.945904,
-        "longitude": 174.964023
-      }
-    },
-    "registration_open": "2025-01-25T05:00:00.000Z",
-    "registration_close": "2025-04-08T11:59:00.000Z",
-    "registration_full": false
-  },
-  {
     "id": "NZSouthIslandChampionship2025",
     "name": "NZ South Island Championship 2025",
     "city": "Dunedin",
@@ -139,6 +108,37 @@
       }
     },
     "registration_open": "2025-02-03T05:00:00.000Z",
+    "registration_close": "2025-04-08T11:59:00.000Z",
+    "registration_full": false
+  },
+  {
+    "id": "AucklandAutumn2025",
+    "name": "Auckland Autumn 2025",
+    "city": "Auckland",
+    "date": {
+      "from": "2025-04-12",
+      "till": "2025-04-12",
+      "numberOfDays": 1
+    },
+    "isCanceled": false,
+    "events": [
+      "333",
+      "333bf",
+      "333mbf",
+      "444bf",
+      "clock",
+      "skewb"
+    ],
+    "venue": {
+      "name": " Whitford Community Hall",
+      "address": "1 Whitford-Maraetai Road, Whitford 2571",
+      "details": "Council Hall ",
+      "coordinates": {
+        "latitude": -36.945904,
+        "longitude": 174.964023
+      }
+    },
+    "registration_open": "2025-01-25T05:00:00.000Z",
     "registration_close": "2025-04-08T11:59:00.000Z",
     "registration_full": false
   },
@@ -242,40 +242,6 @@
     "registration_full": false
   },
   {
-    "id": "BigandBlindQueenstown2025",
-    "name": "Big and Blind Queenstown 2025",
-    "city": "Queenstown",
-    "date": {
-      "from": "2025-03-08",
-      "till": "2025-03-09",
-      "numberOfDays": 2
-    },
-    "isCanceled": false,
-    "events": [
-      "333",
-      "333bf",
-      "333oh",
-      "444",
-      "444bf",
-      "555",
-      "555bf",
-      "666",
-      "777",
-      "minx",
-      "sq1"
-    ],
-    "venue": {
-      "name": "Te Atamira",
-      "coordinates": {
-        "latitude": -45.026946,
-        "longitude": 168.744158
-      }
-    },
-    "registration_open": "2025-02-05T05:00:00.000Z",
-    "registration_close": "2025-03-04T10:59:00.000Z",
-    "use_wca_registration": false
-  },
-  {
     "id": "JohnsonvilleFTOpen2025",
     "name": "Johnsonville FTOpen 2025",
     "city": "Wellington",
@@ -308,33 +274,37 @@
     "registration_full": false
   },
   {
-    "id": "Sqauckland2025",
-    "name": "Sqauckland 2025",
-    "city": "Auckland",
+    "id": "BigandBlindQueenstown2025",
+    "name": "Big and Blind Queenstown 2025",
+    "city": "Queenstown",
     "date": {
-      "from": "2025-02-22",
-      "till": "2025-02-22",
-      "numberOfDays": 1
+      "from": "2025-03-08",
+      "till": "2025-03-09",
+      "numberOfDays": 2
     },
     "isCanceled": false,
     "events": [
-      "222",
       "333",
+      "333bf",
+      "333oh",
       "444",
+      "444bf",
+      "555",
+      "555bf",
+      "666",
+      "777",
       "minx",
       "sq1"
     ],
     "venue": {
-      "name": "Mt Albert War Memorial Hall ",
-      "address": "Councillors Drive, Mt Albert, Auckland 1025",
-      "details": "Main Hall ",
+      "name": "Te Atamira",
       "coordinates": {
-        "latitude": -36.879027,
-        "longitude": 174.725407
+        "latitude": -45.026946,
+        "longitude": 168.744158
       }
     },
-    "registration_open": "2024-12-16T05:00:00.000Z",
-    "registration_close": "2025-02-18T10:59:00.000Z",
-    "registration_full": false
+    "registration_open": "2025-02-05T05:00:00.000Z",
+    "registration_close": "2025-03-04T10:59:00.000Z",
+    "use_wca_registration": false
   }
 ]
