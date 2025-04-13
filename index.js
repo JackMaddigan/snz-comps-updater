@@ -1,70 +1,55 @@
 import fs from "fs";
 import fetch from "node-fetch";
-
-runUpdate();
+import { setTimeout } from "timers/promises";
 
 async function runUpdate() {
-  console.log("Starting update!");
-
-  const comps = JSON.parse(fs.readFileSync("./competitions.json"));
-  const knownCompIds = new Set(comps.map((comp) => comp.id));
-
-  console.log(
-    "Fetching comps from https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json"
-  );
-
-  const response = await fetch(
-    "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json"
-  );
-
+  console.info("Starting Update...")
+  // Dates for comparing to the comps
   const now = new Date();
-  now.setHours(0, 0, 0, 0);
-
   const thirtyDaysBeforeNow = new Date(now);
   thirtyDaysBeforeNow.setDate(now.getDate() - 30);
 
-  const fetchedComps = (await response.json()).items;
+  // Fetch currentComps from the json file and fetch the updated ones from unnoficial WCA api
+  const data = JSON.parse(fs.readFileSync("./data.json"));
+  const currentComps = data.competitions ? data.competitions.filter(comp => new Date(comp.date.till) > thirtyDaysBeforeNow) : [];
+  const updatedComps = (await getUpdatedComps()).items;
 
-  for (const comp of fetchedComps) {
-    if (knownCompIds.has(comp.id)) continue;
-    const till = new Date(comp.date.till);
-    if (till < thirtyDaysBeforeNow) break;
-    console.log(`New comp: ${comp.name}`);
-    // prettier-ignore
-    const { id, name, city, date, isCanceled, events, venue: { name: venue, coordinates }} = comp;
-    // prettier-ignore
-    const newComp = { id, name, city, date, isCanceled, events, venue: { name: venue, coordinates, }, ...(await fetchWCACompData(comp.id)), };
-    comps.push(newComp);
+  // Filter updatedComps to only include ones that are recent, current or future and not canceled, and remove a few fields
+  const filteredUpdatedComps = updatedComps
+    .filter((comp) => new Date(comp.date.till) > thirtyDaysBeforeNow && !comp.isCanceled)
+    .map(({information, wcaDelegates, organisers, ...comp}) => comp);
+  
+  // for each filteredUpdatedComps, if it is in currentComps then add the reg date to it, else fetch from WCA
+  // so that I don't have to update every field if something is changed such as events
+  for(const comp of filteredUpdatedComps){
+    comp.registration = currentComps.find(cc => cc.id==comp.id)?.registration || await getRegDatesFromWCA(comp.id);
   }
 
-  const sortedFilteredComps = comps
-    .filter(
-      (comp) =>
-        new Date(comp.date.from) > thirtyDaysBeforeNow && !comp.isCanceled
-    )
-    .sort((a, b) => (new Date(a.date.from) < new Date(b.date.from) ? 1 : -1));
+  // add any comps from currentComps that are not in updatedComps that may have been added manually such as an FMC multilocation
+  // currentComps was already filtered so that old comps are no longer in it
+  const manualComps = currentComps.filter(({compId}) => !filteredUpdatedComps.map(comp => comp.id).includes(compId));
+  const processedComps = filteredUpdatedComps.concat(manualComps).sort((a, b) => a.date.from.localeCompare(b.date.from));
 
-  console.log("Writing to competitions.json...");
-  fs.writeFileSync(
-    "./competitions.json",
-    JSON.stringify(sortedFilteredComps, null, 2)
-  );
-  console.log("Finished");
+  fs.writeFileSync("./data.json", JSON.stringify({competitions: processedComps}, null, 2));
+  console.info("Update Finished!")
 }
 
-async function fetchWCACompData(compId) {
-  try {
+async function getUpdatedComps() {
+  const response = await fetch(`https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api/competitions/NZ.json`);
+  return await response.json();
+}
+
+async function getRegDatesFromWCA(compId){
+    console.info("Fetching reg info for "+compId);
+    await setTimeout(500);
     const response = await fetch(
       `https://api.worldcubeassociation.org/competitions/${compId}`
     );
 
-    const comp = await response.json();
-    return {
-      registration_open: comp.registration_open,
-      registration_close: comp.registration_close,
-      use_wca_registration: comp.use_wca_registration,
-    };
-  } catch (error) {
-    console.error(error);
-  }
+    const { registration_open,registration_close } = await response.json();
+    return { open: registration_open, close: registration_close };
 }
+
+runUpdate().catch(error => {
+  console.error("An error occurred while running the update!\n", error);
+});

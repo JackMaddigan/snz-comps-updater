@@ -2,11 +2,11 @@ name: Update Competitions
 
 on:
   schedule:
-    - cron: "30 17 * * *"
-  workflow_dispatch: # Allows manual trigger of the workflow
+    - cron: "30 17 * * *" # Runs daily at 17:30 UTC
+  workflow_dispatch: # Allows manual triggering from GitHub UI
 
 permissions:
-  contents: write # Grant permission to push changes
+  contents: write # Allows committing changes to the repo
 
 jobs:
   update-competitions:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # Use a specific Node.js version
+          node-version: "20" # Use a stable Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -31,18 +31,17 @@ jobs:
         id: check_changes
         run: |
           if git diff --quiet; then
-            echo "No changes detected.";
-            echo "has_changes=false" >> $GITHUB_ENV;
+            echo "No changes detected."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected.";
-            echo "has_changes=true" >> $GITHUB_ENV;
-          fi
+            echo "Changes detected."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
 
       - name: Commit changes
-        if: ${{ env.has_changes == 'true' }}
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
-          git add competitions.json
-          git commit -m "Update competitions.json"
+          git add data.json
+          git commit -m "Update data.json"
           git push
