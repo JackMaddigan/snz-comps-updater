@@ -27,7 +27,8 @@ async function runUpdate() {
 
   // add any comps from currentComps that are not in updatedComps that may have been added manually such as an FMC multilocation
   // currentComps was already filtered so that old comps are no longer in it
-  const manualComps = currentComps.filter(({compId}) => !filteredUpdatedComps.map(comp => comp.id).includes(compId));
+  const filteredUpdatedCompsIds = filteredUpdatedComps.map(comp => comp.id);
+  const manualComps = currentComps.filter(comp => {console.log(comp.id);return !filteredUpdatedCompsIds.includes(comp.id)});
   const processedComps = filteredUpdatedComps.concat(manualComps).sort((a, b) => a.date.from.localeCompare(b.date.from));
 
   fs.writeFileSync("./data.json", JSON.stringify({competitions: processedComps}, null, 2));

@@ -1,1 +1,271 @@
-{"competitions": []}
+{
+  "competitions": [
+    {
+      "id": "TwistinginTitirangi2025",
+      "name": "Twisting in Titirangi 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-03-16",
+        "till": "2025-03-16",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333oh",
+        "666",
+        "777"
+      ],
+      "venue": {
+        "name": "Titirangi War Memorial Hall",
+        "address": "500 South Titirangi Road, Titirangi, Auckland 0604",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -36.939109,
+          "longitude": 174.655862
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/TwistinginTitirangi2025",
+      "registration": {
+        "open": "2024-12-20T05:00:00.000Z",
+        "close": "2025-03-11T10:59:00.000Z"
+      }
+    },
+    {
+      "id": "QueensparkOClock2025",
+      "name": "Queenspark O'Clock 2025",
+      "city": "Christchurch",
+      "country": "NZ",
+      "date": {
+        "from": "2025-03-29",
+        "till": "2025-03-30",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333oh",
+        "444",
+        "666",
+        "clock",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Queenspark School",
+        "address": "222 Queenspark Drive, Parklands, Christchurch 8083",
+        "details": "School Hall",
+        "coordinates": {
+          "latitude": -43.473541,
+          "longitude": 172.696141
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/QueensparkOClock2025",
+      "registration": {
+        "open": "2025-02-06T05:00:00.000Z",
+        "close": "2025-03-25T10:59:00.000Z"
+      }
+    },
+    {
+      "id": "CrazyCubinginChristchurch2025",
+      "name": "Crazy Cubing in Christchurch 2025",
+      "city": "Christchurch",
+      "country": "NZ",
+      "date": {
+        "from": "2025-04-05",
+        "till": "2025-04-06",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333oh",
+        "444bf",
+        "555",
+        "555bf",
+        "777",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "WEA Christchurch",
+        "address": "59 Gloucester Street, Christchurch Central City, Christchurch 8013",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -43.529677,
+          "longitude": 172.631613
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/CrazyCubinginChristchurch2025",
+      "registration": {
+        "open": "2025-02-03T05:00:00.000Z",
+        "close": "2025-04-01T10:59:00.000Z"
+      }
+    },
+    {
+      "id": "AucklandAutumn2025",
+      "name": "Auckland Autumn 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-04-12",
+        "till": "2025-04-12",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "333",
+        "333bf",
+        "333mbf",
+        "444bf",
+        "clock",
+        "skewb"
+      ],
+      "venue": {
+        "name": " Whitford Community Hall",
+        "address": "1 Whitford-Maraetai Road, Whitford 2571",
+        "details": "Council Hall ",
+        "coordinates": {
+          "latitude": -36.945904,
+          "longitude": 174.964023
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/AucklandAutumn2025",
+      "registration": {
+        "open": "2025-01-25T05:00:00.000Z",
+        "close": "2025-04-08T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "NZSouthIslandChampionship2025",
+      "name": "NZ South Island Championship 2025",
+      "city": "Dunedin",
+      "country": "NZ",
+      "date": {
+        "from": "2025-04-12",
+        "till": "2025-04-14",
+        "numberOfDays": 3
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333mbf",
+        "333oh",
+        "444",
+        "444bf",
+        "555",
+        "555bf",
+        "666",
+        "777",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Edgar Centre - Harbour View Lounge",
+        "address": "116 Portsmouth Drive, Andersons Bay, Dunedin 9012",
+        "details": "First floor, signs will point towards the \"Harbour View Lounge\"",
+        "coordinates": {
+          "latitude": -45.892584,
+          "longitude": 170.511783
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/NZSouthIslandChampionship2025",
+      "registration": {
+        "open": "2025-02-03T05:00:00.000Z",
+        "close": "2025-04-08T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "PuzzlingPapatoetoe2025",
+      "name": "Puzzling Papatoetoe 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-05-10",
+        "till": "2025-05-10",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "444",
+        "clock",
+        "minx",
+        "pyram",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Papatoetoe Town Hall",
+        "address": "35 Saint George Street, Papatoetoe, Auckland 2025",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -36.97988,
+          "longitude": 174.852595
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/PuzzlingPapatoetoe2025",
+      "registration": {
+        "open": "2025-02-17T05:00:00.000Z",
+        "close": "2025-05-06T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "NZNorthIslandChampionship2025",
+      "name": "NZ North Island Championship 2025",
+      "city": "Palmerston North",
+      "country": "NZ",
+      "date": {
+        "from": "2025-07-11",
+        "till": "2025-07-13",
+        "numberOfDays": 3
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333mbf",
+        "333oh",
+        "444",
+        "444bf",
+        "555",
+        "555bf",
+        "666",
+        "777",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Community Leisure Centre",
+        "address": "569 Ferguson Street, Terrace End, Palmerston North 4410",
+        "details": "Neville Butler Hall",
+        "coordinates": {
+          "latitude": -40.352527,
+          "longitude": 175.62849
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/competitions/NZNorthIslandChampionship2025",
+      "registration": {
+        "open": "2024-12-03T05:00:00.000Z",
+        "close": "2025-07-07T11:59:00.000Z"
+      }
+    }
+  ]
+}
