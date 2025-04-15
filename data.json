@@ -1,39 +1,6 @@
 {
   "competitions": [
     {
-      "id": "TwistinginTitirangi2025",
-      "name": "Twisting in Titirangi 2025",
-      "city": "Auckland",
-      "country": "NZ",
-      "date": {
-        "from": "2025-03-16",
-        "till": "2025-03-16",
-        "numberOfDays": 1
-      },
-      "isCanceled": false,
-      "events": [
-        "222",
-        "333",
-        "333oh",
-        "666",
-        "777"
-      ],
-      "venue": {
-        "name": "Titirangi War Memorial Hall",
-        "address": "500 South Titirangi Road, Titirangi, Auckland 0604",
-        "details": "Main Hall",
-        "coordinates": {
-          "latitude": -36.939109,
-          "longitude": 174.655862
-        }
-      },
-      "externalWebsite": "https://speedcubing.nz/competitions/TwistinginTitirangi2025",
-      "registration": {
-        "open": "2024-12-20T05:00:00.000Z",
-        "close": "2025-03-11T10:59:00.000Z"
-      }
-    },
-    {
       "id": "QueensparkOClock2025",
       "name": "Queenspark O'Clock 2025",
       "city": "Christchurch",
