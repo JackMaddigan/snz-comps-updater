@@ -191,6 +191,74 @@
       }
     },
     {
+      "id": "WellingtonSkewbShowdown2025",
+      "name": "Wellington Skewb Showdown 2025",
+      "city": "Wellington",
+      "country": "NZ",
+      "date": {
+        "from": "2025-05-17",
+        "till": "2025-05-17",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "555",
+        "777",
+        "clock",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Ākau Tangi Sports Centre",
+        "address": "72 Kemp Street, Kilbirnie, Wellington 6022",
+        "details": "Mātairangi Room",
+        "coordinates": {
+          "latitude": -41.317629,
+          "longitude": 174.801597
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-04-19T05:00:00.000Z",
+        "close": "2025-05-12T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "MoreCubesKarori2025",
+      "name": "More Cubes Karori 2025",
+      "city": "Wellington",
+      "country": "NZ",
+      "date": {
+        "from": "2025-05-18",
+        "till": "2025-05-18",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "333bf",
+        "333fm",
+        "333mbf",
+        "444bf",
+        "555bf"
+      ],
+      "venue": {
+        "name": "Karori Arts & Crafts Centre",
+        "address": "7 Beauchamp Street, Karori, Wellington 6012",
+        "details": "Main Room",
+        "coordinates": {
+          "latitude": -41.285298,
+          "longitude": 174.737983
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-04-19T06:00:00.000Z",
+        "close": "2025-05-12T11:59:00.000Z"
+      }
+    },
+    {
       "id": "NZNorthIslandChampionship2025",
       "name": "NZ North Island Championship 2025",
       "city": "Palmerston North",
