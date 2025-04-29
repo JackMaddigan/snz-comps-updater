@@ -1,43 +1,6 @@
 {
   "competitions": [
     {
-      "id": "QueensparkOClock2025",
-      "name": "Queenspark O'Clock 2025",
-      "city": "Christchurch",
-      "country": "NZ",
-      "date": {
-        "from": "2025-03-29",
-        "till": "2025-03-30",
-        "numberOfDays": 2
-      },
-      "isCanceled": false,
-      "events": [
-        "222",
-        "333",
-        "333oh",
-        "444",
-        "666",
-        "clock",
-        "pyram",
-        "skewb",
-        "sq1"
-      ],
-      "venue": {
-        "name": "Queenspark School",
-        "address": "222 Queenspark Drive, Parklands, Christchurch 8083",
-        "details": "School Hall",
-        "coordinates": {
-          "latitude": -43.473541,
-          "longitude": 172.696141
-        }
-      },
-      "externalWebsite": "https://speedcubing.nz/competitions/QueensparkOClock2025",
-      "registration": {
-        "open": "2025-02-06T05:00:00.000Z",
-        "close": "2025-03-25T10:59:00.000Z"
-      }
-    },
-    {
       "id": "CrazyCubinginChristchurch2025",
       "name": "Crazy Cubing in Christchurch 2025",
       "city": "Christchurch",
