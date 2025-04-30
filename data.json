@@ -222,6 +222,148 @@
       }
     },
     {
+      "id": "HurryUpHalswell2025",
+      "name": "Hurry Up Halswell 2025",
+      "city": "Christchurch",
+      "country": "NZ",
+      "date": {
+        "from": "2025-05-31",
+        "till": "2025-05-31",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "444",
+        "clock",
+        "pyram"
+      ],
+      "venue": {
+        "name": "Haswell Community Centre",
+        "address": "450 Halswell Road, Halswell, Christchurch 8025",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -43.586033,
+          "longitude": 172.570329
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-02T00:00:00.000Z",
+        "close": "2025-05-24T00:00:00.000Z"
+      }
+    },
+    {
+      "id": "MilfordWinterWarmUp2025",
+      "name": "Milford Winter Warm Up 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-06-14",
+        "till": "2025-06-15",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333oh",
+        "444",
+        "555",
+        "clock",
+        "minx",
+        "pyram"
+      ],
+      "venue": {
+        "name": "Milford Primary School",
+        "address": "34 Shakespeare Road, Milford",
+        "details": "School hall at Milford Primary School accessible via Shakespeare Road or Otakau Road",
+        "coordinates": {
+          "latitude": -36.775622,
+          "longitude": 174.761586
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-03T00:00:00.000Z",
+        "close": "2025-06-08T00:00:00.000Z"
+      }
+    },
+    {
+      "id": "WellingtonWinter2025",
+      "name": "Wellington Winter 2025",
+      "city": "Wellington",
+      "country": "NZ",
+      "date": {
+        "from": "2025-06-21",
+        "till": "2025-06-21",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333mbf",
+        "333oh",
+        "444",
+        "555",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "[Wellington Bridge Club](https://wellingtonbridge.co.nz/)",
+        "address": "17 Tinakori Road, Thorndon, Wellington 6011",
+        "details": "Tinakori room",
+        "coordinates": {
+          "latitude": -41.269741,
+          "longitude": 174.78019
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-02T05:00:00.000Z",
+        "close": "2025-06-16T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "CopinginAuckland2025",
+      "name": "Coping in Auckland 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-07-05",
+        "till": "2025-07-05",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "555",
+        "pyram",
+        "skewb"
+      ],
+      "venue": {
+        "name": "Drury Hall",
+        "address": "10 Tui Street, Drury, Auckland 2113",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -37.102408,
+          "longitude": 174.952624
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-01T06:00:00.000Z",
+        "close": "2025-07-01T11:59:00.000Z"
+      }
+    },
+    {
       "id": "NZNorthIslandChampionship2025",
       "name": "NZ North Island Championship 2025",
       "city": "Palmerston North",
@@ -263,6 +405,40 @@
       "registration": {
         "open": "2024-12-03T05:00:00.000Z",
         "close": "2025-07-07T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "2x2inTamakiMakaurau2025",
+      "name": "2x2 in Tāmaki Makaurau 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-08-16",
+        "till": "2025-08-16",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "555",
+        "666",
+        "777",
+        "clock"
+      ],
+      "venue": {
+        "name": "Freemans Bay Community Hall",
+        "address": "52 Hepburn Street, Freemans Bay, Auckland 1011",
+        "details": "Auditorium",
+        "coordinates": {
+          "latitude": -36.853159,
+          "longitude": 174.751147
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-05T06:00:00.000Z",
+        "close": "2025-08-12T11:59:00.000Z"
       }
     }
   ]
