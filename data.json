@@ -1,46 +1,6 @@
 {
   "competitions": [
     {
-      "id": "CrazyCubinginChristchurch2025",
-      "name": "Crazy Cubing in Christchurch 2025",
-      "city": "Christchurch",
-      "country": "NZ",
-      "date": {
-        "from": "2025-04-05",
-        "till": "2025-04-06",
-        "numberOfDays": 2
-      },
-      "isCanceled": false,
-      "events": [
-        "222",
-        "333",
-        "333bf",
-        "333oh",
-        "444bf",
-        "555",
-        "555bf",
-        "777",
-        "minx",
-        "pyram",
-        "skewb",
-        "sq1"
-      ],
-      "venue": {
-        "name": "WEA Christchurch",
-        "address": "59 Gloucester Street, Christchurch Central City, Christchurch 8013",
-        "details": "Main Hall",
-        "coordinates": {
-          "latitude": -43.529677,
-          "longitude": 172.631613
-        }
-      },
-      "externalWebsite": "https://speedcubing.nz/competitions/CrazyCubinginChristchurch2025",
-      "registration": {
-        "open": "2025-02-03T05:00:00.000Z",
-        "close": "2025-04-01T10:59:00.000Z"
-      }
-    },
-    {
       "id": "AucklandAutumn2025",
       "name": "Auckland Autumn 2025",
       "city": "Auckland",
