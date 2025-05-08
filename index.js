@@ -22,7 +22,17 @@ async function runUpdate() {
   // for each filteredUpdatedComps, if it is in currentComps then add the reg date to it, else fetch from WCA
   // so that I don't have to update every field if something is changed such as events
   for(const comp of filteredUpdatedComps){
-    comp.registration = currentComps.find(cc => cc.id==comp.id)?.registration || await getRegDatesFromWCA(comp.id);
+    const thisCompFromCurrentComps = currentComps.find(cc => cc.id==comp.id);
+    if(thisCompFromCurrentComps){
+      // don't need to fetch the reg info and venue, just update the new version with the old one
+      comp.registration = thisCompFromCurrentComps.registration;
+      comp.venue.name = thisCompFromCurrentComps.venue.name;
+    }else{
+      // is a new comp so the old version in the unupdated array does not have the comp, need to fetch from wca
+      const { venueName, registration } =  await getInfoFromWCA(comp.id);
+      comp.registration = registration;
+      comp.venue.name = venueName;
+    }
   }
 
   // add any comps from currentComps that are not in updatedComps that may have been added manually such as an FMC multilocation
@@ -40,15 +50,18 @@ async function getUpdatedComps() {
   return await response.json();
 }
 
-async function getRegDatesFromWCA(compId){
+async function getInfoFromWCA(compId){
     console.info("Fetching reg info for "+compId);
     await setTimeout(500);
     const response = await fetch(
       `https://api.worldcubeassociation.org/competitions/${compId}`
     );
 
-    const { registration_open,registration_close } = await response.json();
-    return { open: registration_open, close: registration_close };
+    let { registration_open,registration_close, venue } = await response.json();
+
+    // handle markdown link
+    if(venue.includes("[")) {venue = venue.match(/(?<=\[).*?(?=\])/)[0];}
+    return {venueName: venue, registration: {open: registration_open, close: registration_close} };
 }
 
 runUpdate().catch(error => {
