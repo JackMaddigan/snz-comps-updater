@@ -1,50 +1,6 @@
 {
   "competitions": [
     {
-      "id": "NZSouthIslandChampionship2025",
-      "name": "NZ South Island Championship 2025",
-      "city": "Dunedin",
-      "country": "NZ",
-      "date": {
-        "from": "2025-04-12",
-        "till": "2025-04-14",
-        "numberOfDays": 3
-      },
-      "isCanceled": false,
-      "events": [
-        "222",
-        "333",
-        "333bf",
-        "333mbf",
-        "333oh",
-        "444",
-        "444bf",
-        "555",
-        "555bf",
-        "666",
-        "777",
-        "clock",
-        "minx",
-        "pyram",
-        "skewb",
-        "sq1"
-      ],
-      "venue": {
-        "name": "Edgar Centre - Naylor Love Lounge",
-        "address": "116 Portsmouth Drive, Andersons Bay, Dunedin 9012",
-        "details": "First floor, signs will point towards the \"Naylor Love Lounge\"",
-        "coordinates": {
-          "latitude": -45.892584,
-          "longitude": 170.511783
-        }
-      },
-      "externalWebsite": "https://speedcubing.nz/competitions/NZSouthIslandChampionship2025",
-      "registration": {
-        "open": "2025-02-03T05:00:00.000Z",
-        "close": "2025-04-08T11:59:00.000Z"
-      }
-    },
-    {
       "id": "PuzzlingPapatoetoe2025",
       "name": "Puzzling Papatoetoe 2025",
       "city": "Auckland",
