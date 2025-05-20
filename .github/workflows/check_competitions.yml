@@ -2,7 +2,7 @@ name: Update Competitions
 
 on:
   schedule:
-    - cron: "30 17 * * *" # Runs daily at 17:30 UTC
+    - cron: "55 11 * * *" # Runs daily at 11:55 UTC
   workflow_dispatch: # Allows manual triggering from GitHub UI
 
 permissions:
