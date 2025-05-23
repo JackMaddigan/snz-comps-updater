@@ -173,6 +173,40 @@
       }
     },
     {
+      "id": "TwistyTeRaekura2025",
+      "name": "Twisty Te Raekura 2025",
+      "city": "Christchurch",
+      "country": "NZ",
+      "date": {
+        "from": "2025-06-21",
+        "till": "2025-06-21",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333oh",
+        "444",
+        "clock",
+        "pyram"
+      ],
+      "venue": {
+        "name": "Te Raekura Redcliffs School",
+        "address": "113 Beachville Road, Redcliffs, Christchurch 8081",
+        "details": "School Hall",
+        "coordinates": {
+          "latitude": -43.556806,
+          "longitude": 172.733343
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-23T00:00:00.000Z",
+        "close": "2025-06-14T00:00:00.000Z"
+      }
+    },
+    {
       "id": "WellingtonWinter2025",
       "name": "Wellington Winter 2025",
       "city": "Wellington",
@@ -321,6 +355,50 @@
       "registration": {
         "open": "2025-05-05T06:00:00.000Z",
         "close": "2025-08-12T11:59:00.000Z"
+      }
+    },
+    {
+      "id": "NewZealandNationals2025",
+      "name": "New Zealand Nationals 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-12-12",
+        "till": "2025-12-14",
+        "numberOfDays": 3
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333mbf",
+        "333oh",
+        "444",
+        "444bf",
+        "555",
+        "555bf",
+        "666",
+        "777",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Auckland Netball Centre",
+        "address": "7 Allison Ferguson Drive, St Johns, Auckland 1072",
+        "details": "Indoor Arena (Main Stadium)",
+        "coordinates": {
+          "latitude": -36.884675,
+          "longitude": 174.844483
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-21T06:00:00.000Z",
+        "close": "2025-11-30T10:59:00.000Z"
       }
     }
   ]
