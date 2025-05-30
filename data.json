@@ -280,6 +280,42 @@
       }
     },
     {
+      "id": "WaihopaiWinter2025",
+      "name": "Waihopai Winter 2025",
+      "city": "Invercargill",
+      "country": "NZ",
+      "date": {
+        "from": "2025-07-05",
+        "till": "2025-07-06",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333oh",
+        "444",
+        "minx",
+        "pyram",
+        "skewb"
+      ],
+      "venue": {
+        "name": "Invercargill City Library",
+        "address": "50 Dee Street, Invercargill 9810",
+        "details": "Activity Learning Spaces located on the back left of the ground floor from the main entrance",
+        "coordinates": {
+          "latitude": -46.411142,
+          "longitude": 168.347045
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-05-30T00:00:00.000Z",
+        "close": "2025-07-02T00:00:00.000Z"
+      }
+    },
+    {
       "id": "NZNorthIslandChampionship2025",
       "name": "NZ North Island Championship 2025",
       "city": "Palmerston North",
