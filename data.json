@@ -394,6 +394,86 @@
       }
     },
     {
+      "id": "SolveWellinWellington2025",
+      "name": "Solve Well in Wellington 2025",
+      "city": "Wellington",
+      "country": "NZ",
+      "date": {
+        "from": "2025-08-23",
+        "till": "2025-08-24",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333mbf",
+        "333oh",
+        "444",
+        "555",
+        "666",
+        "777",
+        "minx",
+        "pyram"
+      ],
+      "venue": {
+        "name": "Victoria University of Wellington, Kelburn Campus",
+        "address": "Victoria University of Wellington, Kelburn, Wellington 6012",
+        "details": "Room: Alan MacDiarmid 102 & 104 (AM102 & AM104)",
+        "coordinates": {
+          "latitude": -41.290488,
+          "longitude": 174.767793
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-06-05T06:00:00.000Z",
+        "close": "2025-08-11T06:00:00.000Z"
+      }
+    },
+    {
+      "id": "OtepotiBigCubes2025",
+      "name": "Ōtepoti Big Cubes 2025",
+      "city": "Dunedin",
+      "country": "NZ",
+      "date": {
+        "from": "2025-08-30",
+        "till": "2025-08-31",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333oh",
+        "444",
+        "555",
+        "666",
+        "777",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Green Island Bowling Club",
+        "address": "183 Main South Road, Green Island, Dunedin 9001",
+        "details": "Main Hall",
+        "coordinates": {
+          "latitude": -45.901466,
+          "longitude": 170.431889
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-06-06T00:00:00.000Z",
+        "close": "2025-08-29T00:00:00.000Z"
+      }
+    },
+    {
       "id": "NewZealandNationals2025",
       "name": "New Zealand Nationals 2025",
       "city": "Auckland",
