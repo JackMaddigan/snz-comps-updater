@@ -474,6 +474,42 @@
       }
     },
     {
+      "id": "HastyHastings2025",
+      "name": "Hasty Hastings 2025",
+      "city": "Hastings",
+      "country": "NZ",
+      "date": {
+        "from": "2025-09-27",
+        "till": "2025-09-27",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333oh",
+        "444",
+        "clock",
+        "minx",
+        "pyram",
+        "skewb"
+      ],
+      "venue": {
+        "name": "Frimley Park Community Hall",
+        "address": "317 Hapuku Street, Frimley, Hastings 4120 ",
+        "details": "Hall",
+        "coordinates": {
+          "latitude": -39.626036,
+          "longitude": 176.830873
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-06-06T06:00:00.000Z",
+        "close": "2025-09-24T06:00:00.000Z"
+      }
+    },
+    {
       "id": "NewZealandNationals2025",
       "name": "New Zealand Nationals 2025",
       "city": "Auckland",
