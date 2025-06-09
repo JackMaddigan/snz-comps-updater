@@ -1,41 +1,6 @@
 {
   "competitions": [
     {
-      "id": "PuzzlingPapatoetoe2025",
-      "name": "Puzzling Papatoetoe 2025",
-      "city": "Auckland",
-      "country": "NZ",
-      "date": {
-        "from": "2025-05-10",
-        "till": "2025-05-10",
-        "numberOfDays": 1
-      },
-      "isCanceled": false,
-      "events": [
-        "222",
-        "333",
-        "444",
-        "clock",
-        "minx",
-        "pyram",
-        "sq1"
-      ],
-      "venue": {
-        "name": "Papatoetoe Town Hall",
-        "address": "35 Saint George Street, Papatoetoe, Auckland 2025",
-        "details": "Main Hall",
-        "coordinates": {
-          "latitude": -36.97988,
-          "longitude": 174.852595
-        }
-      },
-      "externalWebsite": "https://speedcubing.nz/competitions/PuzzlingPapatoetoe2025",
-      "registration": {
-        "open": "2025-02-17T05:00:00.000Z",
-        "close": "2025-05-06T11:59:00.000Z"
-      }
-    },
-    {
       "id": "WellingtonSkewbShowdown2025",
       "name": "Wellington Skewb Showdown 2025",
       "city": "Wellington",
