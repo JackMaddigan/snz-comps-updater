@@ -475,6 +475,44 @@
       }
     },
     {
+      "id": "NZCubingDecathlon2025",
+      "name": "New Zealand Cubing Decathlon 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-10-25",
+        "till": "2025-10-26",
+        "numberOfDays": 2
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "333bf",
+        "333mbf",
+        "333oh",
+        "555",
+        "777",
+        "clock",
+        "minx",
+        "pyram"
+      ],
+      "venue": {
+        "name": "Pakuranga United Rugby Club, Montressor's Function Centre",
+        "address": "78 Bells Road, Pakuranga Heights, Auckland 2010",
+        "details": "Dufty Bell Lounge (Upstairs Room)",
+        "coordinates": {
+          "latitude": -36.908712,
+          "longitude": 174.901877
+        }
+      },
+      "externalWebsite": null,
+      "registration": {
+        "open": "2025-06-09T06:00:00.000Z",
+        "close": "2025-10-21T10:59:00.000Z"
+      }
+    },
+    {
       "id": "NewZealandNationals2025",
       "name": "New Zealand Nationals 2025",
       "city": "Auckland",
