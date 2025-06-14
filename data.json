@@ -439,6 +439,74 @@
       }
     },
     {
+      "id": "BeachsideAuckland2025",
+      "name": "Beachside Auckland 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-09-20",
+        "till": "2025-09-20",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "222",
+        "333",
+        "444",
+        "555",
+        "clock",
+        "pyram",
+        "sq1"
+      ],
+      "venue": {
+        "name": "Bucklands and Eastern Beaches Memorial Hall",
+        "address": "48 The Parade, Bucklands Beach",
+        "details": "Council Hall ",
+        "coordinates": {
+          "latitude": -36.868519,
+          "longitude": 174.903751
+        }
+      },
+      "externalWebsite": "https://speedcubing.org.nz/competitions",
+      "registration": {
+        "open": "2025-06-15T13:00:00.000Z",
+        "close": "2025-09-18T00:00:00.000Z"
+      }
+    },
+    {
+      "id": "PleaseBeQuietAuckland2025",
+      "name": "Please Be Quiet Auckland 2025",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": {
+        "from": "2025-09-21",
+        "till": "2025-09-21",
+        "numberOfDays": 1
+      },
+      "isCanceled": false,
+      "events": [
+        "333bf",
+        "333fm",
+        "333mbf",
+        "444bf",
+        "555bf"
+      ],
+      "venue": {
+        "name": "1st Mount Albert St Jude's Scout Hall",
+        "address": "1213A New North Road",
+        "details": "Scout Hall",
+        "coordinates": {
+          "latitude": -36.89494,
+          "longitude": 174.703341
+        }
+      },
+      "externalWebsite": "https://speedcubing.nz/",
+      "registration": {
+        "open": "2025-06-15T00:00:00.000Z",
+        "close": "2025-09-14T00:00:00.000Z"
+      }
+    },
+    {
       "id": "HastyHastings2025",
       "name": "Hasty Hastings 2025",
       "city": "Hastings",
